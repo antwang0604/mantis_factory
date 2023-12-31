@@ -41,7 +41,7 @@ void Factory::PrintUtilizationRecord() {
     std::cout << "                OPERATIONAL   SUMMARY:                 " << std::endl;
     std::cout << "-------------------------------------------------------" << std::endl;
     for(auto kv : total_utilization_records_) {
-        std::cout << kv.first << " processed " << kv.second << " times" << std::endl;
+        std::cout << ToString(kv.first) << " processed " << kv.second << " times" << std::endl;
     }
     std::cout << "=======================================================" << std::endl;
 }
