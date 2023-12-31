@@ -6,13 +6,13 @@ In the Mantis factory, everything is configurable to form a flexible production 
 
 ## Repo Structure
 ### Important Classes
-Station - the fundemental building block of assembly lines. Unique stations (Station_A, Station_B ...) are inherited from the base class **Station**. Station A is currently configure to add 1 to the workpiece. Station B is currently configured to subtract 1 to the workpiece. Station C diverts the workpiece base on the workpiece. If the workpiece is odd valued, it diverts the workpiece to the next station; if the workpiece is even valued, it diverts the workpiece the next next station (skip one) depending on the workpiece.
+- Station - the fundemental building block of assembly lines. Unique stations (Station_A, Station_B ...) are inherited from the base class **Station**. Station A is currently configure to add 1 to the workpiece. Station B is currently configured to subtract 1 to the workpiece. Station C diverts the workpiece base on the workpiece. If the workpiece is odd valued, it diverts the workpiece to the next station; if the workpiece is even valued, it diverts the workpiece the next next station (skip one) depending on the workpiece.
 
-Assembly Line - The collection of stations that can take an input (raw material) and produce an output (final product). The assembly line also tracks the build records.  
+- Assembly Line - The collection of stations that can take an input (raw material) and produce an output (final product). The assembly line also tracks the build records.  
 
-Factory - the main component that houses the assembly lines and the outter interface for external clients.  
+- Factory - the main component that houses the assembly lines and the outter interface for external clients.  
 
-Line Configuration - The helper class to configure assembly lines, read user inputs, read and write from the configuration file (more info on the configuration file below).
+- Line Configuration - The helper class to configure assembly lines, read user inputs, read and write from the configuration file (more info on the configuration file below).
 
 
 ### File Structure
@@ -32,8 +32,17 @@ the make file will be generated inside the build directory. Next, we can compile
 This will generate the binary **RunMantisFactory** in the top level directory.
 
 ## Operational Instructions
+### Main Menu Breakdown
+The main menu displays the current assembly line configuration for your reference. It also displays the different operations you can perform.
+![Menu](https://github.com/antwang0604/mantis_factory/blob/main/img/menu.png)
 
-### Pre-Requisites:
+### Selection Modes:
+- Configure Assembly Line: If you desire to change the assembly line configuration, enter 1. You will then need to enter the desired configuration for the new assembly line.
+- Run Assembly Line: If you desire to run the assembly line, enter 2. You will then need to enter the input (raw material) you would like to run through the line.
+- Print Total Station Utilization Record: If you desire to print the total station utilization record from the current session, enter 3.
+- Print Build Logs: If you desire to print out the build logs to look at detail statistics from previous production runs, enter 4.
+
+### Prerequisites:
 
 - Locate the executable file called **RunMantisFactory** , it should be in the folder mantis_factory. If you cannot locate the executable, follow the compilation process above.
 - Confirm that the configuration file is present in the same directoy as executable file **RunMantisFactory**
@@ -43,7 +52,7 @@ This will generate the binary **RunMantisFactory** in the top level directory.
 
 1. Launch the program by entering the command `./RunMantisFactory`
 2. Wait for the program to completely launch and you will be greeted with the main menu.
-3. There are 4 different operations you can choose. Select the desired operation you would like to perform. You can reference the section **Selection Modes** below to understand more about each function.
+3. There are 4 different operations you can choose. Select the desired operation you would like to perform. You can reference the section **Selection Modes** to understand more about each function.
 4. Continue step 3 until you are complete. Enter -1 to exit the program.
 
 EXAMPLE:
@@ -56,17 +65,15 @@ EXAMPLE:
   - production run 2 input is 2, output is 3.
 - You want to examine the station utilization logs. Station A should have ran 4 times, while station B and C should have ran 1 time.
 
-1. Select (1) to configure the assembly line
-
-### Main Menu Breakdown
-The main menu displays the current assembly line configuration for your reference. It also displays the different operations you can perform.
-
-### Selection Modes:
-#### Configure Assembly Line
-If you desire to change the assembly line configuration, enter 1. You will then need to enter the desired configuration for the new assembly line.
-#### Run Assembly Line
-If you desire to run the assembly line, enter 2. You will then need to enter the input (raw material) you would like to run through the line.
-#### Print Total Station Utilization Record
- If you desire to print the total station utilization record from the current session, enter 3.
-#### Print Build Logs
-If you desire to print out the build logs to look at detail statistics from previous production runs, enter 4.
+1. Start with an empty assembly line  
+![Step 1](https://github.com/antwang0604/mantis_factory/blob/main/img/Step1.png)
+2. Select (1) to configure the assembly line  
+![Step 2](https://github.com/antwang0604/mantis_factory/blob/main/img/Step2.png)
+3. Enter the raw material value 1 to run assembly line  
+![Step 3](https://github.com/antwang0604/mantis_factory/blob/main/img/Step3.png)
+4. Configure assembly line to ABCBA and run raw material 2 through line  
+![Step 4](https://github.com/antwang0604/mantis_factory/blob/main/img/Step4.png)
+5. View the build logs by entering 4  
+![Step 5](https://github.com/antwang0604/mantis_factory/blob/main/img/Step5.png)
+6. View the utilization logs by entering 3  
+![Step 6](https://github.com/antwang0604/mantis_factory/blob/main/img/Step6.png)
