@@ -26,7 +26,10 @@ The file **assm_line_config.txt** is located in the top level directory. **This 
 
 
 ## Compilation Process
-This software uses cmake and make for the compilation process. To build the executable, first, you want to navigate to the build directory  
+This software uses cmake and make for the compilation process.  
+Confirm that you have the repo cloned, if not:  
+`git clone https://github.com/antwang0604/mantis_factory.git`  
+To build the executable, first, you want to navigate to the build directory  
 `cd {$PATH_TO_MANTIS_FACTORY_REPO}/build`  
 Next, use Cmake to automatically generate the make file  
 `cmake ..`  
