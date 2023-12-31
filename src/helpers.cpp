@@ -1,25 +1,5 @@
 #include <helpers.h>
 
-std::ostream& operator<<(std::ostream& os, const StationType& station_type)
-{
-    switch (station_type) {
-        case StationType::A:
-            os << "Station A";
-            break;
-        case StationType::B:
-            os << "Station B";
-            break;
-        case StationType::C:
-            os << "Station C";
-            break;
-        default:
-            os << "Unknown Station";
-            break;
-    }
-
-    return os;
-}
-
 std::string ToString(const StationType& station_type)
 {
     std::string output;

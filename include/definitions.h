@@ -4,6 +4,10 @@
 #include <vector>
 #include <unordered_map>
 
+/**
+ * @brief Type of stations represented using a scoped enum
+ * 
+ */
 enum class StationType {
     A = 0,
     B = 1,
@@ -11,6 +15,10 @@ enum class StationType {
     UNKNOWN
 };
 
+/**
+ * @brief Internal struct for storing each assembly line run
+ * 
+ */
 struct BuildLog {
     int input;
     int output;

@@ -6,7 +6,10 @@ In the Mantis factory, everything is configurable to form a flexible production 
 
 ## Repo Structure
 ### Important Classes
-- Station - the fundemental building block of assembly lines. Unique stations (Station_A, Station_B ...) are inherited from the base class **Station**. Station A is currently configure to add 1 to the workpiece. Station B is currently configured to subtract 1 to the workpiece. Station C diverts the workpiece base on the workpiece. If the workpiece is odd valued, it diverts the workpiece to the next station; if the workpiece is even valued, it diverts the workpiece the next next station (skip one) depending on the workpiece.
+- Station - the fundemental building block of assembly lines. Unique stations (Station_A, Station_B ...) are inherited from the base class **Station**. 
+  - Station A is currently configure to add 1 to the workpiece. 
+  - Station B is currently configured to subtract 1 to the workpiece. 
+  - Station C diverts the workpiece base on the workpiece. If the workpiece is odd valued, it diverts the workpiece to the next station; if the workpiece is even valued, it diverts the workpiece the next next station (skip one) depending on the workpiece.
 
 - Assembly Line - The collection of stations that can take an input (raw material) and produce an output (final product). The assembly line also tracks the build records.  
 
