@@ -5,6 +5,7 @@
 #include <station.h>
 #include <unordered_map>
 #include <vector>
+#include <memory>
 
 /**
  * @brief Assembly Line class that contains various stations.

@@ -1,2 +1,7 @@
 .vscode
 RunMantisFactory
+.vs
+*.exe
+*.ilk
+*.pdb
+out
